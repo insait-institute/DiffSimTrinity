@@ -1,0 +1,9 @@
+__pycache__/
+*.py[cod]
+*.so
+.DS_Store
+.vscode/
+logs/
+*.gif
+*.png
+*.pkl
