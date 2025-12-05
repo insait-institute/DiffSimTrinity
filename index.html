@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="A differentiable motion simulator enables the end-to-end training of accurate and efficient autonomous driving policies.">
+  <meta name="keywords" content="DiffSim, APG, autonomous driving, differentiable simulation, analytic policy gradients, analytic world models, differentiable search">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="The DiffSim Trinity">
+  <meta property="og:description" content="A differentiable motion simulator enables the end-to-end training of accurate and efficient autonomous driving policies.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="/">
+  <meta property="og:image" content="/static/images/diffsim_preview.png">
+  <meta property="og:site_name" content="The DiffSim Trinity">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The DiffSim Trinity">
+  <meta name="twitter:description" content="A differentiable motion simulator enables the end-to-end training of accurate and efficient autonomous driving policies.">
+  <meta name="twitter:url" content="/">
+  <meta name="twitter:image" content="/static/images/diffsim_preview.png">
+  <title>The DiffSim Trinity</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<header class="diffsim-nav" role="navigation" aria-label="primary">
+  <div class="container is-max-desktop has-text-centered">
+    <h1 class="title is-2 diffsim-nav__title">
+      <a href="./" class="diffsim-nav__title-link">The DiffSim Trinity</a>
+    </h1>
+    <p class="subtitle is-5 diffsim-nav__subtitle">End-to-end control, planning, and search via differentiable physics</p>
+    <div class="diffsim-nav__links">
+      <a class="diffsim-nav__home is-hidden"
+         href="./"
+         aria-label="Home"
+         title="Home">
+        <span class="icon is-small">
+          <i class="fas fa-home" aria-hidden="true"></i>
+        </span>
+      </a>
+      <div class="diffsim-nav__group">
+        <a class="button is-dark is-rounded diffsim-nav__link"
+           href="./control/">
+          <span class="icon">
+            <i class="fas fa-car"></i>
+          </span>
+          <span>Control</span>
+        </a>
+        <a class="button is-dark is-rounded diffsim-nav__link"
+           href="./planning/">
+          <span class="icon">
+            <i class="fas fa-route"></i>
+          </span>
+          <span>Planning</span>
+        </a>
+        <a class="button is-dark is-rounded diffsim-nav__link"
+           href="./search/">
+          <span class="icon">
+            <i class="fas fa-search"></i>
+          </span>
+          <span>Search</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="section pt-4 pb-2">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column has-text-centered">
+        <!-- <p class="subtitle is-5 has-text-weight-semibold diffsim-hero-intro__tagline">In collaboration with</p> -->
+        <div class="is-size-5 publication-authors mt-3">
+          <span class="author-block">
+            <a href="https://scholar.google.com/citations?hl=en&user=a_fDw5YAAAAJ">Asen Nachkov</a>,</span>
+          <span class="author-block">
+            <a href="https://jannicozaech.github.io/">Jan-Nico Zaech</a>,</span>
+          <span class="author-block">
+            <a href="https://insait.ai/dr-danda-paudel/">Danda Pani Paudel</a>,</span>
+          <span class="author-block">
+            <a href="https://xiwang1212.github.io/homepage/">Xi Wang</a>,</span>
+          <span class="author-block">
+            <a href="https://rpg.ifi.uzh.ch/people_scaramuzza.html">Davide Scaramuzza</a>,</span>
+          <span class="author-block">
+            <a href="https://vision.ee.ethz.ch/people-details.OTAyMzM=.TGlzdC8zMjg3LC0xOTcxNDY1MTc4.html">Luc Van Gool</a>
+          </span>
+        </div>
+
+        <div class="institution-logos mt-4">
+          <img src="./static/images/insaitlogo.png"
+               alt="INSAIT logo"
+               class="institution-logo">
+          <img src="./static/images/unizurichlogo.png"
+               alt="University of Zurich logo"
+               class="institution-logo">
+          <img src="./static/images/ethlogo.png"
+               alt="ETH Zurich logo"
+               class="institution-logo">
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container gif-gallery-container has-text-centered">
+      <div class="columns gif-gallery is-multiline is-centered is-gapless mt-4">
+        <div class="column is-one-third-desktop is-one-third-tablet is-full-mobile">
+        <p class="gif-gallery-title"><strong>Control</strong></p>
+        <figure class="diffsim-gif-card">
+          <img src="./static/images/reactive3.gif"
+               class="image is-inline-block diffsim-teaser"
+               alt="DiffSim animation one">
+          <figcaption class="gif-caption">Driving by <b>reactive control</b>. Agent predicts actions.</figcaption>
+        </figure>
+      </div>
+      <div class="column is-one-third-desktop is-one-third-tablet is-full-mobile">
+        <p class="gif-gallery-title"><strong>Planning</strong></p>
+        <figure class="diffsim-gif-card">
+          <img src="./static/images/planner_12.gif"
+               class="image is-inline-block diffsim-teaser"
+               alt="DiffSim animation two">
+          <figcaption class="gif-caption">Driving by <b>reactive planning</b>. Agent predicts the desired next state to visit.</figcaption>
+        </figure>
+      </div>
+      <div class="column is-one-third-desktop is-one-third-tablet is-full-mobile">
+        <p class="gif-gallery-title"><strong>Search</strong></p>
+        <figure class="diffsim-gif-card">
+          <img src="./static/images/animation13.gif"
+               class="image is-inline-block diffsim-teaser"
+               alt="DiffSim animation three">
+          <figcaption class="gif-caption">Driving by <b>searching</b> for the best ego-action sequence in the imagined future.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">What is the DiffSim Trinity?</h2>
+        <div class="content has-text-justified">
+          
+          <p>
+            In many simulators, analytic and often differentiable equations move the world from one state to the next. For autonomous vehicles, these equations capture the nonlinear motion of a vehicle 
+            under certain control inputs like steering and acceleration. 
+            They often are our best attempt to model the real motion in a simple, computationally tractable way. Yet, the usage of these equations for training agents
+           has so far been underexplored.
+          </p>
+          <p>
+            <strong>Differentiable simulation</strong> (DiffSim) allows us to backpropagate through the dynamics of a system, unifying data collection and parameter tuning into a single computation graph. 
+            For autonomous driving, that means the simulator is no longer just a tool to replay scenarios, but a part of the model.
+          </p>
+          <p>
+          The <strong>DiffSim Trinity</strong> covers three uses: <strong>control</strong> (predict a low-level action), <strong>planning</strong> (predict a desired or counterfactual state), 
+          and <strong>search</strong> (find the best action sequence at test time in new scenes). In all settings training is done in the outcome space, not the action space, respecting the dynamics, without costly trial-and-error sampling.
+          </p>
+
+
+            Overall, <strong>differentiable simulation enables novel agentic capabilities and faster training pipelines</strong>.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered"></div>
+    <div class="columns is-centered"></div>
+  </div>
+</footer>
+
+</body>
+</html>

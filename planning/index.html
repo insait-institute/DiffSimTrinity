@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="A differentiable motion simulator enables the end-to-end training of accurate and efficient autonomous driving policies.">
+  <meta name="keywords" content="DiffSim, APG, autonomous driving, differentiable simulation, analytic policy gradients, analytic world models, differentiable search">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="The DiffSim Trinity">
+  <meta property="og:description" content="A differentiable motion simulator enables the end-to-end training of accurate and efficient autonomous driving policies.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="/planning/">
+  <meta property="og:image" content="/static/images/diffsim_preview.png">
+  <meta property="og:site_name" content="The DiffSim Trinity">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The DiffSim Trinity">
+  <meta name="twitter:description" content="A differentiable motion simulator enables the end-to-end training of accurate and efficient autonomous driving policies.">
+  <meta name="twitter:url" content="/planning/">
+  <meta name="twitter:image" content="/static/images/diffsim_preview.png">
+  <title>The DiffSim Trinity</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+
+  <link rel="stylesheet" href="../static/css/bulma.min.css">
+  <link rel="stylesheet" href="../static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="../static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="../static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="../static/css/index.css">
+  <link rel="icon" href="../static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="../static/js/fontawesome.all.min.js"></script>
+  <script src="../static/js/bulma-carousel.min.js"></script>
+  <script src="../static/js/bulma-slider.min.js"></script>
+  <script src="../static/js/index.js"></script>
+</head>
+<body>
+
+<header class="diffsim-nav" role="navigation" aria-label="primary">
+  <div class="container is-max-desktop has-text-centered">
+    <h1 class="title is-2 diffsim-nav__title">
+      <a href="../" class="diffsim-nav__title-link">The DiffSim Trinity</a>
+    </h1>
+    <p class="subtitle is-5 diffsim-nav__subtitle">End-to-end control, planning, and search via differentiable physics</p>
+    <div class="diffsim-nav__links diffsim-nav__links--offset">
+      
+      
+      <div class="diffsim-nav__group">
+
+        <a class="diffsim-nav__home diffsim-nav__home--nudge-left"
+         href="../"
+         aria-label="Home"
+         title="Home">
+        <span class="icon is-small">
+          <i class="fas fa-home" aria-hidden="true"></i>
+        </span>
+      </a>
+        <a class="button is-dark is-rounded diffsim-nav__link"
+           href="../control/">
+          <span class="icon">
+            <i class="fas fa-car"></i>
+          </span>
+          <span>Control</span>
+        </a>
+        <a class="button is-dark is-rounded diffsim-nav__link is-active"
+           href="./">
+          <span class="icon">
+            <i class="fas fa-route"></i>
+          </span>
+          <span>Planning</span>
+        </a>
+        <a class="button is-dark is-rounded diffsim-nav__link"
+           href="../search/">
+          <span class="icon">
+            <i class="fas fa-search"></i>
+          </span>
+          <span>Search</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Unlocking Efficient Vehicle Dynamics Modeling via Analytic World Models</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?hl=en&user=a_fDw5YAAAAJ">Asen Nachkov</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://insait.ai/dr-danda-paudel/">Danda Pani Paudel</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://jannicozaech.github.io/">Jan-Nico Zaech</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://rpg.ifi.uzh.ch/people_scaramuzza.html">Davide Scaramuzza</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://vision.ee.ethz.ch/people-details.OTAyMzM=.TGlzdC8zMjg3LC0xOTcxNDY1MTc4.html">Luc Van Gool</a><sup>1</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>INSAIT, Sofia University "St. Kliment Ohridski"</span>
+          </div>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>2</sup>University of Zurich, Switzerland</span>
+          </div>
+
+          <div class="institution-logos">
+            <img src="../static/images/insaitlogo.png"
+                 alt="INSAIT logo"
+                 class="institution-logo">
+            <img src="../static/images/unizurichlogo.png"
+                 alt="University of Zurich logo"
+                 class="institution-logo">
+          </div>
+          <div class="publication-venue is-flex is-justify-content-center">
+            <span>
+              Appears at: <a href="https://aaai.org/conference/aaai/aaai-26/" class="has-text-weight-bold">AAAI 2026</a>
+            </span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/2502.10012"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2502.10012"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://github.com/insait-institute/DiffSimTrinity"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop has-text-centered">
+    <figure class="diffsim-gif-card">
+      <img src="../static/images/diffsim_plan_teaser.png"
+           class="image is-inline-block diffsim-teaser"
+           alt="Extending differentiable simulation to world models." />
+      <figcaption class="gif-caption"><b>Analytic World Models</b> use the differentiable dynamics of an environment to 
+        predict next, desired, and counterfactual states.</figcaption>
+    </figure>
+  </div>
+  <p><br></p>
+  <div class="container is-max-desktop">
+    <div class="box has-background-light diffsim-tldr">
+      <p><strong>tl;dr</strong><br>We embed the simulator's differentiable dynamics into the computation graph of different world-models to learn predictive, 
+        prescriptive, and counterfactual state predictors efficiently. DiffSim lets us solve these inverse/what-if problems without trial-and-error
+  search.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+Differentiable simulators represent an environment's dynamics as a differentiable function. 
+Within robotics and autonomous driving, this property is used in Analytic Policy Gradients (APG), which relies on backpropagating through the 
+dynamics to train accurate policies for diverse tasks. Here we show that differentiable simulation also has an important role in world modeling, 
+where it can impart predictive, prescriptive, and counterfactual capabilities to an agent. Specifically, we design three novel task setups in 
+which the differentiable dynamics are combined within an end-to-end computation graph not with a policy, but a state predictor. This allows us
+ to learn relative odometry, optimal planners, and optimal inverse states. We collectively call these predictors Analytic World Models (AWMs) 
+ and demonstrate how differentiable simulation enables their efficient, end-to-end learning. In autonomous driving scenarios, they have broad
+  applicability and can augment an agent's decision-making beyond reactive control.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+
+<section class="section pt-0">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Method &ndash; Analytic World Models</h2>
+
+        <p>
+        <br>
+        Compared to <i>control</i>, where the focus is on the prediction of actions,
+        world modeling is concerned with the prediction of states. This is a rich and nuanced setting that includes next-states resulting from an action sequence,
+        desirable states not conditioned on any actions, and counterfactual states answering "what-if" questions.
+        All of these require understanding the world's dynamics, which is where differentiable simulation comes in. Hence, when applied to world modeling, 
+        DiffSim enables the backpropagation of gradients through the dynamics and into the world predictors.
+        <br><br>
+  </p>
+  
+  <div class="container is-max-desktop has-text-centered">
+    <figure class="diffsim-gif-card">
+      <img src="../static/images/diffsim_plan_workings.png"
+           class="image is-inline-block diffsim-plan-workings"
+           alt="The benefits of differentiable simulation." />
+      <figcaption class="gif-caption">DiffSim losses are computed in the state space, where the environment's dynamics condition any obtained state.</figcaption>
+    </figure>
+  </div>
+
+  <br>
+  <p>
+        DiffSim is useful because it embeds the environment's dynamics into the training loop. Consider a setting in which the goal is to
+        learn an action such that after execution in the simulator, a loss outcome is minimal. Behavior cloning works by directly supervising the prediced action
+        without regards to the dynamics. Even though the model learns a distribution centered on the right action (red, left), if the dynamics are nonlinear,
+        for some of the action values an undesirably high loss will be obtained. DiffSim methods compute the loss directly in the outcome space, considering the dynamics.
+        As a result, the learned action distribution is tighter and the obtained loss is smaller. This pattern holds also when learning world models.
+        <br><br>
+        The concept of a world model is nuanced, as there are different ways to understand the effect of one's own actions.
+        We formulate three task setups related to world modeling. 
+        <ol class="custom-list">
+        <li>The effect of an agent's action could be understood as the difference between the agent's next state, resulting from that action, and its 
+        current state. This setup has an <strong>odometric interpretation</strong>, 
+        asking the question <i>“Where will the agent go?”</i>. </li>
+        <li>An agent could predict a <strong>desired next state</strong> to visit, a 
+        form of state planning. It asks the question <i>“Where should it go?”</i>.</li>
+        <li>We can ask <i>“Given an action in a particular state, 
+        what should that state be so this action is optimal?”</i>, which is a form of world modeling but also an <strong>inverse problem</strong>, effectively 
+        asking the counterfactual <i>“Where should the agent have been?”</i>.</li> 
+        </ol>
+        <br>
+
+        All these tasks can be solved using a trial-and-error approach as in RL, where the agent has to explore and search. Yet, our DiffSim designs solve these tasks efficiently,
+        without search, from direct supervision. We call the corresponding predictors Analytic World 
+        Models (AWMs). Full details on the precise optimization problems are available in the paper.
+  </p>
+  </div>
+</section>
+
+
+
+<section class="section pt-0">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Experiments and Results</h2>
+
+    <div class="container is-max-desktop has-text-centered">
+      <figure class="diffsim-gif-card">
+        <img src="../static/images/diffsim_plan_samples.png"
+            class="image is-inline-block diffsim-control-results"
+            alt="AWM results." />
+        <figcaption class="gif-caption">AWM outputs: prescriptive planning and controllable predictive rollouts in varied scenes.</figcaption>
+      </figure>
+    </div>
+
+    <p>
+      <br>
+      We evaluate in Waymax, over the <a href="https://arxiv.org/abs/2104.10133">Waymo Open Motion Dataset</a>, with predictive, prescriptive, and counterfactual AWMs. First, consider the prescriptive model, also called a <i>planner</i> because it imagines the next desirable state which the agent should reach. The top row shows different scenes
+      in which the ego-vehicle drives by imagining the next desired state and using the environment's inverse kinematics to obtain the action that reaches it. The evaluation shows that
+      our agent can drive just as well when predicting desired next state, as when predicting low-level actions.      
+      <br><br>
+      Second, the bottom row in the above figure shows qualitative predictions from the predictive world model, which is a next-state predictor. This world model allows the agent to imagine the trajectory resulting from a given action sequence.
+      We can manually set the actions to represent a left or right turn, or straight acceleration. As the agent is executing these actions in the simulator, it imagines the next one second of its motion, at different points in time
+      (shown as multiple sets of different-colored points). The imagined trajectory closely aligns with the real, executed trajectory. The agent is able to imagine its future motion accurately.
+      <br>
+    </p>
+
+    <div class="container is-max-desktop has-text-centered diffsim-figure-compact">
+      <figure class="diffsim-gif-card">
+        <img src="../static/images/diffsim_plan_inv_norm.png"
+            class="image is-inline-block diffsim-plan-counterfactual"
+            alt="AWM counterfactual predictions." />
+        <figcaption class="gif-caption">The colored trajectory highlights the ego-vehicle's inverse confidence in its actions, which represent risky over-acceleration.</figcaption>
+      </figure>
+    </div>
+
+    <p>
+      <br>
+      Third, to demonstrate its counterfactual capabilities, we train a predictor that given the current state and an action, estimates an alternative state in which this action would
+      have been optimal (see full paper for details). This is still a form of world modeling and differentiable simulation allows us to efficiently find this state. Once estimated, the
+      agent can then use it as a confidence metric for its action. If this alternative state is far from the current one, it means the current action is not optimal. Based on this, 
+      in the figure above we color the trajectory according to the agent's confidence in its actions. In this scenario the agent over-accelerates and deviates from the expert trajectory.
+      As a result, the displacement from the counterfactual predictor increases, and similarly, its confidence decreases.
+    </p>
+
+  </div>
+</section>
+
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>
+@inproceedings{nachkov2025unlocking,
+  title={Unlocking Efficient Vehicle Dynamics Modeling via Analytic World Models},
+  author={Nachkov, Asen and Paudel, Danda Pani and Zaech, Jan-Nico and Scaramuzza, Davide and Van Gool, Luc},
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+  year={2026}
+}
+</code></pre>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

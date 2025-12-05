@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="A differentiable motion simulator enables the end-to-end training of accurate and efficient autonomous driving policies.">
+  <meta name="keywords" content="DiffSim, APG, autonomous driving, differentiable simulation, analytic policy gradients, analytic world models, differentiable search">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="The DiffSim Trinity">
+  <meta property="og:description" content="A differentiable motion simulator enables the end-to-end training of accurate and efficient autonomous driving policies.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="/control/">
+  <meta property="og:image" content="/static/images/diffsim_preview.png">
+  <meta property="og:site_name" content="The DiffSim Trinity">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The DiffSim Trinity">
+  <meta name="twitter:description" content="A differentiable motion simulator enables the end-to-end training of accurate and efficient autonomous driving policies.">
+  <meta name="twitter:url" content="/control/">
+  <meta name="twitter:image" content="/static/images/diffsim_preview.png">
+  <title>The DiffSim Trinity</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+
+  <link rel="stylesheet" href="../static/css/bulma.min.css">
+  <link rel="stylesheet" href="../static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="../static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="../static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="../static/css/index.css">
+  <link rel="icon" href="../static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="../static/js/fontawesome.all.min.js"></script>
+  <script src="../static/js/bulma-carousel.min.js"></script>
+  <script src="../static/js/bulma-slider.min.js"></script>
+  <script src="../static/js/index.js"></script>
+</head>
+<body>
+
+<header class="diffsim-nav" role="navigation" aria-label="primary">
+  <div class="container is-max-desktop has-text-centered">
+    <h1 class="title is-2 diffsim-nav__title">
+      <a href="../" class="diffsim-nav__title-link">The DiffSim Trinity</a>
+    </h1>
+    <p class="subtitle is-5 diffsim-nav__subtitle">End-to-end control, planning, and search via differentiable physics</p>
+    <div class="diffsim-nav__links diffsim-nav__links--offset">
+      <div class="diffsim-nav__group">
+        <a class="diffsim-nav__home diffsim-nav__home--nudge-left"
+           href="../"
+           aria-label="Home"
+           title="Home">
+          <span class="icon is-small">
+            <i class="fas fa-home" aria-hidden="true"></i>
+          </span>
+        </a>
+        <a class="button is-dark is-rounded diffsim-nav__link is-active"
+           href="./">
+          <span class="icon">
+            <i class="fas fa-car"></i>
+          </span>
+          <span>Control</span>
+        </a>
+        <a class="button is-dark is-rounded diffsim-nav__link"
+           href="../planning/">
+          <span class="icon">
+            <i class="fas fa-route"></i>
+          </span>
+          <span>Planning</span>
+        </a>
+        <a class="button is-dark is-rounded diffsim-nav__link"
+           href="../search/">
+          <span class="icon">
+            <i class="fas fa-search"></i>
+          </span>
+          <span>Search</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Autonomous Vehicle Controllers <br> From End-to-End Differentiable Simulation</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?hl=en&user=a_fDw5YAAAAJ">Asen Nachkov</a>,</span>
+            <span class="author-block">
+              <a href="https://insait.ai/dr-danda-paudel/">Danda Pani Paudel</a>,</span>
+            <span class="author-block">
+              <a href="https://vision.ee.ethz.ch/people-details.OTAyMzM=.TGlzdC8zMjg3LC0xOTcxNDY1MTc4.html">Luc Van Gool</a>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">INSAIT, Sofia University "St. Kliment Ohridski"</span>
+          </div>
+
+          <div class="institution-logos">
+            <img src="../static/images/insaitlogo.png"
+                 alt="INSAIT logo"
+                 class="institution-logo">
+          </div>
+          <div class="publication-venue is-flex is-justify-content-center">
+            <span>
+              Appears at: <a href="https://www.iros25.org/" class="has-text-weight-bold">IROS 2025</a>
+            </span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/2409.07965"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2409.07965"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://github.com/insait-institute/DiffSimTrinity"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop has-text-centered">
+    <figure class="diffsim-gif-card">
+      <img src="../static/images/diffsim_control_teaser.png"
+           class="image is-inline-block diffsim-teaser"
+           alt="The differentiable simulation loop." />
+      <figcaption class="gif-caption">A differentiable simulator allows gradients to flow through it. This enables end-to-end policy training.</figcaption>
+    </figure>
+  </div>
+  <p><br></p>
+  <div class="container is-max-desktop">
+    <div class="box has-background-light diffsim-tldr">
+      <p><strong>tl;dr</strong><br>
+      Differentiable simulation lets us backprop through the motion dynamics, so we train efficient, accurate, humanlike driving policies. The agent predicts an action, rolls it out in 
+      a differentiable simulator, and is supervised to match the resulting state to expert's state — gradients flow through both the dynamics, which conditions the training.
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+          Current methods to learn controllers for autonomous vehicles (AVs) focus on behavioural cloning. 
+          Being trained only on exact historic data, the resulting agents often generalize poorly to novel 
+          scenarios. Simulators provide the opportunity to go beyond offline datasets, but they are still treated
+           as complicated black boxes, only used to update the global simulation state. As a result, these RL
+            algorithms are slow, sample-inefficient, and prior-agnostic. In this work, we leverage a differentiable
+             simulator and design an analytic policy gradients (APG) approach to training AV controllers on the 
+             large-scale Waymo Open Motion Dataset. Our proposed framework brings the differentiable simulator 
+             into an end-to-end training loop, where gradients of the environment dynamics serve as a useful prior 
+             to help the agent learn a more grounded policy. We combine this setup with a recurrent architecture
+              that can efficiently propagate temporal information across long simulated trajectories. This APG
+               method allows us to learn robust, accurate, and fast policies, while only requiring widely-available 
+               expert trajectories, instead of scarce expert actions. We compare to behavioural cloning and find
+                significant improvements in performance and robustness to noise in the dynamics, as well as overall
+                 more intuitive human-like handling.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+
+<section class="section pt-0">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Method &ndash; Analytic Policy Gradients</h2>
+    <div class="container is-max-desktop has-text-centered">
+      <figure class="diffsim-gif-card">
+        <img src="../static/images/diffsim_control_architecture.png"
+             class="image is-inline-block diffsim-control-arch"
+             alt="APG architecture." />
+        <figcaption class="gif-caption">APG architecture and computations, rolled-out in time. </figcaption>
+      </figure>
+    </div>
+      <p>
+        <br>
+        Our algorithm follows the style of Analytic Policy Gradients (APG). 
+        We use the <a href="https://github.com/waymo-research/waymax">Waymax</a> simulator. 
+        Its state is a composite object containing tensors representing the current locations of the 
+        traffic participants, the traffic lights, the roadgraph, and the route conditioning. Since most of these elements are continuous
+        and the dynamics are differentiable, they can be embedded
+        into an end-to-end training loop in which a policy is rolled-out and supervised.
+        <br><br>
+        Our APG driving agent has three modules: a <strong>scene encoder</strong>, to extract meaningful features from the currently observed scene,
+        a <strong>RNN module</strong> to fuse these features across time, and a <strong>policy head</strong> to choose the right action at every timestep.
+        These components are used autoregressively in order to generate long sequences of actions.
+        <br><br>
+        From the simulator state, we extract an observation containing 
+        the necessary scene elements, which are encoded using the scene encoder. 
+        The RNN, along with the policy head, predict an action
+         that is executed to obtain the new state. Next, we compare this new state to its
+         corresponding ground-truth state at that timestep (red circle). Gradients from the supervision flow back 
+         through the dynamics and update the policy head, RNN, and the scene encoder.  They also accummulate in the RNN hidden state accumulate. We do not backpropagate through the observation or 
+         the simulator state.
+        <br><br>
+         The key property of the architecture is that by combining differentiable simulation with a recurrent policy,
+         the gradients of one dynamics step can mix with those of the policy predictions, and backpropagate through the RNN hidden state
+         into earlier steps. This results in efficient error assignment, with stable and fast training. The learned policy generalizes well to unseen scenes.
+      </p>
+    </div>
+</section>
+
+
+<section class="section pt-0">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Experiments and Results</h2>
+        <div class="container is-max-desktop has-text-centered">
+
+  </div>
+      <p>
+        <br>
+        We evaluate our APG agent in the Waymax simulator over the <a href="https://arxiv.org/abs/2104.10133">Waymo Open Motion</a> scenarios. 
+        We compare against behavior cloning and RL methods, which
+        do not use the simulator's differentiability, in both single-agent and multi-agent settings, where the same trained policy controls all traffic participants.
+        <br><br>
+
+        Behavior cloning trains an agent by replaying the ground-truth trajectory and supervising the predicted actions with the expert ones. In contrast,
+        APG, based on DiffSim, allows the agent to experience the consequences of its actions, and supervises the resulting states.
+        Compared to behavior cloning, an APG agent moves confidently, producing
+        realistic humanlike trajectories.
+        <br>
+      </p>
+
+                         <section class="section inline-gif-section">
+      <div class="container gif-gallery-container gif-gallery-container-compact has-text-centered">
+    <div class="columns gif-gallery is-multiline is-centered is-gapless mt-4">
+      <div class="column is-half-desktop is-half-tablet is-full-mobile">
+        <figure class="diffsim-gif-card">
+          <img src="../static/images/reactive14.gif"
+               class="image is-inline-block diffsim-teaser-small"
+               alt="DiffSim animation two">
+        </figure>
+      </div>
+      <div class="column is-half-desktop is-half-tablet is-full-mobile">
+        <figure class="diffsim-gif-card">
+          <img src="../static/images/reactive15.gif"
+               class="image is-inline-block diffsim-teaser-small"
+               alt="DiffSim animation three">
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <p>
+        As additional experiments, we assess how robust the learned APG policy is with respect to synthetic noise in the dynamics. We observe that the
+        agent can tolerate a small amount of noise, up to 20cm at every timestep, <i>without</i> a deterioration in performance. 
+        A behavior cloning agent at similar noise levels
+        performs considerably worse. Additional experiments, including training on half the length of each sequence, but evaluating on the full length, are available in the paper.
+      </p>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>
+@inproceedings{nachkov2024autonomous,
+  title={Autonomous Vehicle Controllers From End-to-End Differentiable Simulation}, 
+  author={Nachkov, Asen and Paudel, Danda Pani and Van Gool, Luc},
+  booktitle={2025 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)}, 
+  year={2025},
+}</code></pre>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

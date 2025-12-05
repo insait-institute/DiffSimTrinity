@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="A differentiable motion simulator enables the end-to-end training of accurate and efficient autonomous driving policies.">
+  <meta name="keywords" content="DiffSim, APG, autonomous driving, differentiable simulation, analytic policy gradients, analytic world models, differentiable search">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="The DiffSim Trinity">
+  <meta property="og:description" content="A differentiable motion simulator enables the end-to-end training of accurate and efficient autonomous driving policies.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="/search/">
+  <meta property="og:image" content="/static/images/diffsim_preview.png">
+  <meta property="og:site_name" content="The DiffSim Trinity">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The DiffSim Trinity">
+  <meta name="twitter:description" content="A differentiable motion simulator enables the end-to-end training of accurate and efficient autonomous driving policies.">
+  <meta name="twitter:url" content="/search/">
+  <meta name="twitter:image" content="/static/images/diffsim_preview.png">
+  <title>The DiffSim Trinity</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+
+  <link rel="stylesheet" href="../static/css/bulma.min.css">
+  <link rel="stylesheet" href="../static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="../static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="../static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="../static/css/index.css">
+  <link rel="icon" href="../static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="../static/js/fontawesome.all.min.js"></script>
+  <script src="../static/js/bulma-carousel.min.js"></script>
+  <script src="../static/js/bulma-slider.min.js"></script>
+  <script src="../static/js/index.js"></script>
+</head>
+<body>
+
+<header class="diffsim-nav" role="navigation" aria-label="primary">
+  <div class="container is-max-desktop has-text-centered">
+    <h1 class="title is-2 diffsim-nav__title">
+      <a href="../" class="diffsim-nav__title-link">The DiffSim Trinity</a>
+    </h1>
+    <p class="subtitle is-5 diffsim-nav__subtitle">End-to-end control, planning, and search via differentiable physics</p>
+    <div class="diffsim-nav__links diffsim-nav__links--offset">
+      <div class="diffsim-nav__group">
+        <a class="diffsim-nav__home diffsim-nav__home--nudge-left"
+           href="../"
+           aria-label="Home"
+           title="Home">
+          <span class="icon is-small">
+            <i class="fas fa-home" aria-hidden="true"></i>
+          </span>
+        </a>
+        <a class="button is-dark is-rounded diffsim-nav__link"
+           href="../control/">
+          <span class="icon">
+            <i class="fas fa-car"></i>
+          </span>
+          <span>Control</span>
+        </a>
+        <a class="button is-dark is-rounded diffsim-nav__link"
+           href="../planning/">
+          <span class="icon">
+            <i class="fas fa-route"></i>
+          </span>
+          <span>Planning</span>
+        </a>
+        <a class="button is-dark is-rounded diffsim-nav__link is-active"
+           href="./">
+          <span class="icon">
+            <i class="fas fa-search"></i>
+          </span>
+          <span>Search</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Autonomous Vehicle Path Planning by Searching With Differentiable Simulation</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?hl=en&user=a_fDw5YAAAAJ">Asen Nachkov</a><sup>1</sup>,</span>
+              <span class="author-block">
+                <a href="https://jannicozaech.github.io/">Jan-Nico Zaech</a><sup>1</sup>,
+              </span>
+            <span class="author-block">
+              <a href="https://insait.ai/dr-danda-paudel/">Danda Pani Paudel</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://xiwang1212.github.io/homepage/">Xi Wang</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://vision.ee.ethz.ch/people-details.OTAyMzM=.TGlzdC8zMjg3LC0xOTcxNDY1MTc4.html">Luc Van Gool</a><sup>1</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>INSAIT, Sofia University "St. Kliment Ohridski"</span>
+          </div>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>2</sup>ETH Zurich, Switzerland</span>
+          </div>
+
+          <div class="institution-logos">
+            <img src="../static/images/insaitlogo.png"
+                 alt="INSAIT logo"
+                 class="institution-logo">
+            <img src="../static/images/ethlogo.png"
+                 alt="ETHZ logo"
+                 class="institution-logo">
+          </div>
+          <div class="publication-venue is-flex is-justify-content-center">
+            <span>
+              Appears at: <a href="https://aaai.org/conference/aaai/aaai-26/" class="has-text-weight-bold">AAAI 2026</a>
+            </span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/2511.11043"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2511.11043"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://github.com/insait-institute/DiffSimTrinity"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop has-text-centered">
+    <figure class="diffsim-gif-card">
+      <img src="../static/images/diffsim_search_teaser.png"
+           class="image is-inline-block diffsim-teaser"
+           alt="Extending differentiable simulation to world models." />
+      <figcaption class="gif-caption">The <b>Differentiable Simulation for Search</b> algorithm models an agent that uses differentiable simulation
+        to imagine the future at inference time and uses gradient descent to search for its best ego-actions in this imagination.</figcaption>
+    </figure>
+  </div>
+  <p><br></p>
+  <div class="container is-max-desktop">
+    <div class="box has-background-light diffsim-tldr">
+      <p><strong>tl;dr</strong><br>
+      Planning at inference-time is the process of iteratively considering actions, imagining their effects, and searching for the best ones.
+      We use a differentiable simulator as the engine for this process. The resulting agent imagines different likely futures and performs
+      gradient descent in this virtual imagination, optimizing for its best action sequence given the expected behavior of all other agents.      
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+          Planning allows an agent to safely refine its actions before executing them in the real world. 
+          In autonomous driving, this is crucial to avoid collisions and navigate in complex, dense traffic scenarios. One way to plan is to search for the best action sequence. 
+          However, this is challenging when all necessary components &ndash; policy, next-state predictor, and critic &ndash; have to be learned. Here we propose Differentiable 
+          Simulation for Search (DSS), a framework that leverages the differentiable simulator Waymax as both a next state predictor and a critic. It relies on the 
+          simulator's hardcoded dynamics, making state predictions highly accurate, while utilizing the simulator's differentiability to effectively 
+          search across action sequences. Our DSS agent optimizes its actions using gradient descent over imagined future trajectories. We show experimentally 
+          that DSS &ndash; the combination of planning gradients and stochastic search &ndash; significantly improves tracking and path planning accuracy compared to sequence prediction,
+           imitation learning, model-free RL, and other planning methods.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+
+<section class="section pt-0">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Method &ndash; Differentiable Simulation for Search</h2>
+  
+    <p>
+      <i>Plannig</i> is the process of selecting the right actions by predicting and assessing their likely effects.  
+      One way to perform planning is to <i>search</i> for the best action sequence across multiple candidates. We demonstrate that differentiable 
+      simulation is well-suited for this search problem and enables very efficient planning.<br><br>
+
+      Intuitively, to plan effectively, one needs three modules:
+            <br>
+      <ol class="custom-list">
+        <li>A <strong>policy</strong> to propose actions.</li>
+        <li>A <strong>state predictor</strong> to imagine the resulting states from them.</li>
+        <li>A <strong>critic</strong> to score them, according to the agent's preferences.</li>
+      </ol>
+      <br>
+
+      The overarching insight from previous successful planning methods is that environments where we can obtain such components nearly optimally are more
+      suitable for successful planning. This is because a hardcoded realistic simulator used as a state predictor is always more accurate than a learned one that approximates it.
+
+
+      Thus, to search efficiently, we require (i) the next-state predictor and critic to be as accurate as possible, so the agent's imagination faithfully represents a realistic probable
+       future, and (ii) the relationship between the agent's actions and the imagined outcome to be “easy-to-model”, so that a small change in the actions leads to a small change in the
+        imagined outcome. The <a href="https://github.com/waymo-research/waymax">Waymax simulator</a> addresses both. Its hardcoded dynamics are realistic, 
+        making any sampled Monte Carlo trajectory highly informative. By being differentiable, we can backpropagate through it and any error in the imagined outcome induces a 
+        proportional error in the agent's imagined actions.
+        <br><br>
+    </p>
+
+    <div class="container is-max-desktop has-text-centered">
+      <figure class="diffsim-gif-card">
+        <img src="../static/images/diffsim_search_workings.png"
+            class="image is-inline-block diffsim-control-arch"
+            alt="DSS workings." />
+        <figcaption class="gif-caption">The DSS search loop: imagine, score, and use gradient descent to refine action sequences.</figcaption>
+      </figure>
+    </div>
+
+    <p>
+      <br>
+      A typical planning agent that searches over action sequences works by imagining a few future trajectories, of a fixed length. In the figure above, there are K = 2 trajectories (gray), 
+      each of length T = 3 steps. If the simulator is not differentiable, we can still use it to accurately score each trajectory, assigning a loss for them. The final action, shown as a bold black line,
+      is then selected by averaging the first actions from the best imagined trajectories.
+      <br><br>
+      In contrast, when the simulator is differentiable, we can compute the gradients of the loss with respect to the imagined ego-actions. They show exactly how the actions should be changed
+      so that the loss decreases as fast as possible. After taking a single gradient descent step over the actions in this imagined space, the new trajectories are improved, shown as dashed gray circles.
+      Averaging the first actions from the best new trajectories typically results in a much better action, which when executed in the real environment, produces a
+       trajectory (orange) much closer to the best one (green). Thus, the unique feature of a differentiable simulator is that it allows the planning agent to search for the right actions in a more precise,
+       instructive way.
+    </p>
+
+  </div>
+</section>
+
+
+
+<section class="section pt-0">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Experiments and Results</h2>
+    
+    
+    <p>
+    Our framework, Differentiable Simulation for Search, provides a rich testbed consisting of diverse agentic behavior. The case when the agent doesn't search across multiple imagined sequences or use 
+    the environment's differentiability provides a <i>reactive</i> baseline. If it doesn't search but relies on the differentiability, it is <i>reactive with gradients</i>.
+    If it searches without using gradient descent, this represents a <i>simulator as a critic</i> setting. Finally, if it both searches and optimizes its actions, this is the
+    our full proposed <i>differentiable simulator as a critic</i> setting.<br><br> 
+    </p>
+
+    <div class="container is-max-desktop has-text-centered">
+      <figure class="diffsim-gif-card">
+        <img src="../static/images/diffsim_search_ablation.png"
+             class="image is-inline-block diffsim-search-ablation"
+             alt="DSS ablation." />
+        <figcaption class="gif-caption">Ablations: the DSS algorithm supports diverse behaviors for whether the agent should search or refine its actions.</figcaption>
+      </figure>
+    </div>
+
+    <p>
+    <br>
+    We evaluate in Waymax, over the scenarios from the <a href="https://arxiv.org/abs/2104.10133">Waymo Open Motion Dataset</a>. We show that in a tracking experiment, our agent performs
+    as much as 16.9 times better than the reactive setting, when measuring the average displacement with respect to the expert trajectory. This is evidence that our planning approach is useful for producing 
+    safer and more accurate trajectories. Even when comparing against well-established and state-of-the-art behavior cloning, reinforcement learning, and sequence prediction methods,
+    our planning approach yields superior results, showing humanlike driving and less collisions.
+    <br><br>
+    </p>
+    
+    <div class="container is-max-desktop has-text-centered diffsim-figure-compact">
+      <figure class="diffsim-gif-card">
+        <img src="../static/images/diffsim_search_table.png"
+             class="image is-inline-block diffsim-search-table"
+             alt="DSS results." />
+        <figcaption class="gif-caption">Quantitative results: DSS outperforms baselines on tracking metrics.</figcaption>
+      </figure>
+    </div>
+
+
+    <p>
+    <br>
+    The figure below shows qualitative samples from our planning agent. The ego-agent is blue. Its executed trajectory is dashed orange, while the ground-truth expert one is blue.
+    The agent drives by periodically imagining the future of its own motion and the other agents, and updating its actions so as to minimize a planning loss in this imagination.
+    We show imagined trajectories in purple. In the first and last plots we only show the imagination after a certain timestep, while in the middle we show multiple imagined trajectories,
+    from multiple timesteps. Overall, the obtained motion is realistic and humanlike, providing evidence that differentiable simulation can be used in yet another way, 
+    to guide the search process for the best actions at inference time.
+    <br><br>
+    </p>
+    
+    <div class="container has-text-centered diffsim-figure-wide">
+      <figure class="diffsim-gif-card">
+        <img src="../static/images/diffsim_search_tracking3.png"
+             class="image is-inline-block diffsim-search-tracking"
+             alt="DSS scenes." />
+        <figcaption class="gif-caption">Qualitative behavior: imagined rollouts guide safe, humanlike motion.</figcaption>
+      </figure>
+    </div>
+
+  </div>
+</section>
+
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>
+@inproceedings{nachkov2025search,
+  title={Autonomous Vehicle Path Planning by Searching With Differentiable Simulation},
+  author={Nachkov, Asen and Paudel, Danda Pani and Zaech, Jan-Nico and Scaramuzza, Davide and Van Gool, Luc},
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+  year={2026}
+}
+    </code></pre>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
