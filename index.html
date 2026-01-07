@@ -174,12 +174,29 @@
             For autonomous driving, that means the simulator is no longer just a tool to replay scenarios, but a part of the model.
           </p>
           <p>
+            Most current autonomous driving methods do not rely on differentiable simulation. As a result, their end-to-end pipeline is limited: from observational inputs
+            to vehicle outputs and actions. DiffSim fundamentally <strong>extends the meaning of end-to-end trainability</strong> to include the simulator's dynamics. 
+        This allows the driving agent to learn how actions cause outcomes, not just which actions to take. In turn, it enables data-efficient training, direct optimization for safety and comfort, and reasoning about possible future events.
+    </p>
+          <p>
           The <strong>DiffSim Trinity</strong> covers three uses: <strong>control</strong> (predict a low-level action), <strong>planning</strong> (predict a desired or counterfactual state), 
           and <strong>search</strong> (find the best action sequence at test time in new scenes). In all settings training is done in the outcome space, not the action space, respecting the dynamics, without costly trial-and-error sampling.
           </p>
 
 
+          <p>
             Overall, <strong>differentiable simulation enables novel agentic capabilities and faster training pipelines</strong>.
+          </p>
+        </div>
+        <div class="container has-text-centered diffsim-figure-bleed mt-4">
+          <figure class="diffsim-gif-card">
+            <img src="./static/images/e2e_diagram.png"
+                 class="image is-inline-block"
+                 alt="End-to-end differentiable simulation diagram">
+            <figcaption class="gif-caption">
+              DiffSim extends the meaning of end-to-end trainability by including the simulator's dynamics.
+            </figcaption>
+          </figure>
         </div>
       </div>
     </div>

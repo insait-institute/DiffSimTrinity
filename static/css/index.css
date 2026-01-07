@@ -477,6 +477,29 @@ strong {
   padding-right: 1rem;
 }
 
+.diffsim-figure-bleed {
+  width: calc(100% + 6rem);
+  max-width: 1100px;
+  margin-left: -3rem;
+  margin-right: 0;
+}
+
+@media (max-width: 1024px) {
+  .diffsim-figure-bleed {
+    width: calc(100% + 3rem);
+    margin-left: -1.5rem;
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .diffsim-figure-bleed {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
 @media (max-width: 768px) {
   .gif-gallery-container-compact {
     width: 94vw;
